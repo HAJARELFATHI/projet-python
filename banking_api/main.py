@@ -5,6 +5,7 @@ from banking_api.api.routes_transactions import router as transactions_router
 from banking_api.api.routes_stats import router as stats_router
 from banking_api.api.routes_fraud import router as fraud_router
 from banking_api.api.routes_customers import router as customers_router
+from banking_api.api.routes_stats import router as stats_router
 
 app = FastAPI(
     title="Banking Transactions API",
