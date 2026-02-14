@@ -8,6 +8,11 @@ import json
 import pandas as pd
 DELETED_TX_IDS: set[str] = set()
 
+import os
+from pathlib import Path
+
+BASE_DIR = Path(__file__).resolve().parents[2]
+DATA_DIR = Path(os.environ.get("DATA_DIR", BASE_DIR / "data"))
 
 BASE_DIR = Path(__file__).resolve().parents[2]
 DATA_DIR = BASE_DIR / "data"
