@@ -9,6 +9,10 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
+    env:
+      PYTHONPATH: .
+      DATA_DIR: tests/data
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -24,7 +28,5 @@ jobs:
           pip install fastapi uvicorn pandas pytest pytest-cov httpx
 
       - name: Run tests
-        env:
-          DATA_DIR: tests/data
         run: |
           pytest -q
